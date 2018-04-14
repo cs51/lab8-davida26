@@ -1,4 +1,0 @@
-"Rule: ocaml dependencies ml (%=lab8 )": "\023#\022#@\210\136\168\212\156\219\173\18649\208"
-"Resource: /home/david/Documents/Harvard/lab8-davida26/lab8.ml": "\160@\246%=\247\178\226',{\185\186~\134U"
-"Rule: ocaml: ml -> cmo & cmi (%=lab8 )": "\004\233\228\143\2483\202\\\143$\031\n\155\165\140\160"
-"Rule: ocaml: cmo* -> byte (%=lab8 )": "\214X\238\231\253\181\017\141\001g\004\145\187\b;E"

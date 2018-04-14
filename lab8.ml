@@ -156,26 +156,26 @@ Exercise 4: Given your implementation of Event, create a new event
 called "newswire" that should pass strings to the event handlers.
 ......................................................................*)
   
-let newswire : string WEvent.event = WEvent.new_event () ;;
+  let newswire : string WEvent.event = WEvent.new_event () ;;
 
 (* News organizations might want to register event listeners to the
 newswire so that they might report on stories. Below are functions
 for two organizations that accept headlines and "publish" stories (to
 stdout) in different ways. *)
             
-let fakeNewsNetwork (s : string) : unit =
-  Printf.printf "BREAKING NEWS %s\n" s ;;
+  let fakeNewsNetwork (s : string) : unit =
+    Printf.printf "BREAKING NEWS %s\n" s ;;
 
-let buzzFake (s : string) : unit =
-  Printf.printf "YOU'LL NEVER BELIEVE %s\n" s ;;
+  let buzzFake (s : string) : unit =
+    Printf.printf "YOU'LL NEVER BELIEVE %s\n" s ;;
 
 (*......................................................................
 Exercise 5: Register these two news organizations as listeners to the
 newswire event.
 ......................................................................*)
   
-let trump_listener = WEvent.add_listener newswire fakeNewsNetwork ;;
-let tmz_listener = WEvent.add_listener newswire buzzFake ;;
+  let trump_listener = WEvent.add_listener newswire fakeNewsNetwork ;;
+  let tmz_listener = WEvent.add_listener newswire buzzFake ;;
 
 (* Here are some headlines to play with. *)
 
@@ -188,8 +188,8 @@ Exercise 6: Finally, fire newswire events with the above three
 headlines, and observe what happens!
 ......................................................................*)
   
-let newsflash = WEvent.fire_event newswire ;;
-newsflash h1; newsflash h2; newsflash h3 ;;
+  let newsflash = WEvent.fire_event newswire ;;
+  newsflash h1; newsflash h2; newsflash h3 ;;
 
 (* Imagine now that you work at Facebook, and you're growing concerned
 with the proliferation of fake news. To combat the problem, you decide
@@ -202,7 +202,8 @@ the publications don't publish right away. *)
 Exercise 7: Remove the newswire listeners that were previously registered.
 ......................................................................*)
 
-List.iter (fun l -> WEvent.remove_listener newswire l) [trump_listener; tmz_listener];;
+  List.iter (fun l -> WEvent.remove_listener newswire l)
+   [trump_listener; tmz_listener];;
 
 (*......................................................................
 Exercise 8: Create a new event called publish to signal that all
