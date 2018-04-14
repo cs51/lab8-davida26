@@ -1,0 +1,8 @@
+### Starting build.
+# Target: lab8.ml.depends, tags: { warn(A-4-33-40-41-42-43-34-44), extension:ml, file:lab8.ml, ocaml, ocamldep, quiet, strict-sequence, thread, traverse, use_unix }
+/home/david/.opam/4.06.0/bin/ocamldep.opt -modules lab8.ml > lab8.ml.depends # cached
+# Target: lab8.cmo, tags: { warn(A-4-33-40-41-42-43-34-44), byte, compile, extension:cmo, extension:ml, file:lab8.cmo, file:lab8.ml, implem, ocaml, quiet, strict-sequence, thread, traverse, use_unix }
+/home/david/.opam/4.06.0/bin/ocamlc.opt -c -thread -strict-sequence -w A-4-33-40-41-42-43-34-44 -o lab8.cmo lab8.ml # cached
+# Target: lab8.byte, tags: { warn(A-4-33-40-41-42-43-34-44), byte, dont_link_with, extension:byte, file:lab8.byte, link, ocaml, program, quiet, strict-sequence, thread, traverse, use_unix }
+/home/david/.opam/4.06.0/bin/ocamlc.opt unix.cma -thread threads.cma lab8.cmo -o lab8.byte
+# Compilation successful.
